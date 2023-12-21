@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<Scene fx:id="mainPage" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.MainPageController">
+    <AnchorPane prefHeight="442.0" prefWidth="378.0" style="-fx-background-color: #252626;">
+      <children>
+         <Label layoutX="146.0" layoutY="3.0" prefHeight="22.0" prefWidth="105.0" text="Parameters" textAlignment="CENTER" textFill="WHITE">
+            <font>
+               <Font name="Yu Gothic Bold" size="18.0" />
+            </font>
+         </Label>
+         <Label layoutX="50.0" layoutY="50.0" text="Number of sources" textFill="WHITE">
+            <font>
+               <Font name="Yu Gothic Bold" size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="50.0" layoutY="90.0" text="Number of devices" textFill="WHITE">
+            <font>
+               <Font name="Yu Gothic Bold" size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="50.0" layoutY="130.0" text="Number of buffers" textFill="WHITE">
+            <font>
+               <Font name="Yu Gothic Bold" size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="50.0" layoutY="170.0" text="Alpha coefficient" textFill="WHITE">
+            <font>
+               <Font name="Yu Gothic Bold" size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="50.0" layoutY="210.0" text="Beta coefficient" textFill="WHITE">
+            <font>
+               <Font name="Yu Gothic Bold" size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="50.0" layoutY="250.0" text="Lambda coefficient" textFill="WHITE">
+            <font>
+               <Font name="Yu Gothic Bold" size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="numberOfSources" layoutX="260.0" layoutY="45.0" prefHeight="25.0" prefWidth="70.0" />
+         <TextField fx:id="numberOfDevices" layoutX="260.0" layoutY="86.0" prefHeight="25.0" prefWidth="70.0" />
+         <TextField fx:id="numberOfBuffers" layoutX="260.0" layoutY="126.0" prefHeight="25.0" prefWidth="70.0" />
+         <TextField fx:id="alphaCoeff" layoutX="260.0" layoutY="170.0" prefHeight="25.0" prefWidth="70.0" />
+         <TextField fx:id="betaCoeff" layoutX="260.0" layoutY="210.0" prefHeight="25.0" prefWidth="70.0" />
+         <TextField fx:id="lambdaCoeff" layoutX="260.0" layoutY="250.0" prefHeight="25.0" prefWidth="70.0" />
+         <Button fx:id="applyButton" layoutX="160.0" layoutY="301.0" mnemonicParsing="false" onAction="#applyParameters" text="Apply">
+            <font>
+               <Font name="Yu Gothic Bold" size="14.0" />
+            </font>
+            <effect>
+               <Lighting specularExponent="20.37">
+                  <bumpInput>
+                     <Shadow />
+                  </bumpInput>
+                  <light>
+                     <Light.Distant>
+                        <color>
+                           <Color red="0.9490196108818054" green="0.9490196108818054" blue="0.9490196108818054" />
+                        </color>
+                     </Light.Distant>
+                  </light>
+               </Lighting>
+            </effect>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Button fx:id="stepModeButton" layoutX="50.0" layoutY="353.0" mnemonicParsing="false" onAction="#stepModeAction" text="Step mode">
+            <font>
+               <Font name="Yu Gothic Bold" size="14.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+               <Lighting>
+                  <bumpInput>
+                     <Shadow blurType="ONE_PASS_BOX" />
+                  </bumpInput>
+                  <light>
+                     <Light.Distant>
+                        <color>
+                           <Color red="0.9490196108818054" green="0.9490196108818054" blue="0.9490196108818054" />
+                        </color>
+                     </Light.Distant>
+                  </light>
+               </Lighting>
+            </effect>
+         </Button>
+         <Button fx:id="autoModeButton" layoutX="236.0" layoutY="353.0" mnemonicParsing="false" onAction="#autoModeAction" text="Auto mode">
+            <font>
+               <Font name="Yu Gothic Bold" size="14.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+               <Lighting>
+                  <bumpInput>
+                     <Shadow />
+                  </bumpInput>
+                  <light>
+                     <Light.Distant>
+                        <color>
+                           <Color red="0.9490196108818054" green="0.9490196108818054" blue="0.9490196108818054" />
+                        </color>
+                     </Light.Distant>
+                  </light>
+               </Lighting>
+            </effect>
+         </Button>
+      </children></AnchorPane>
+</Scene>
